@@ -1,0 +1,13 @@
+<label for="donnee">Entrez un nombre: </label>
+<input type="number" id="donnee" [(ngModel)]="donnee" min="-200" max="200">
+<select [(ngModel)]="temp1">
+    <option value="C">℃</option>
+    <option value="F">℉</option>
+</select>
+<label> ⇉ </label>
+<select [(ngModel)]="temp2">
+    <option value="C">℃</option>
+    <option value="F">℉</option>
+</select>
+<label> ==> {{ donnee | convert : temp1 : temp2 }}</label>
+
